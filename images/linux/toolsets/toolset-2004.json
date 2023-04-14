@@ -121,7 +121,7 @@
             "name": "az",
             "url" : "https://raw.githubusercontent.com/Azure/az-ps-module-versions/main/versions-manifest.json",
             "versions": [
-                "9.3.0"
+                "9.3.0"  // renovate: datasource=github-releases depName=Azure/az-ps-module-versions
             ],
             "zip_versions": [
                 "3.1.0",
@@ -272,11 +272,12 @@
         ]
     },
     "clang": {
-        "versions": [
-            "10",
-            "11",
-            "12"
-        ],
+        "versions": ["10", "11", "12"],
+        "packageVersions": {
+            "10": "1:10.0.0-4ubuntu1",        // renovate: datasource=repology depName=ubuntu_20_04/clang-10 versioning=deb
+            "11": "1:11.0.0-2~ubuntu20.04.1", // renovate: datasource=repology depName=ubuntu_20_04/clang-11 versioning=deb
+            "12": "1:12.0.0-3ubuntu1~20.04.5" // renovate: datasource=repology depName=ubuntu_20_04/clang-12 versioning=deb
+        },
         "default_version": "11"
     },
     "gcc": {
@@ -312,15 +313,18 @@
     "node_modules": [
         {
             "name": "grunt",
-            "command": "grunt"
+            "command": "grunt",
+            "version": "1.6.0"  // renovate: datasource=npm depName=grunt
         },
         {
             "name": "gulp",
-            "command": "gulp"
+            "command": "gulp",
+            "version": "4.0.2"  // renovate: datasource=npm depName=gulp
         },
         {
             "name": "n",
-            "command": "n"
+            "command": "n",
+            "version": "9.0.1"  // renovate: datasource=npm depName=n
         },
         {
             "name": "parcel",
